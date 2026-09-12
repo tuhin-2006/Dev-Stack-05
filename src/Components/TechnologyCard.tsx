@@ -14,7 +14,7 @@ const TechnologyCard = ({
   return (
     <div
       className={`rounded-2xl border bg-white p-5 shadow-sm ${
-        isAdded ? "border-green-400" : "border-gray-200"
+        isAdded ? "border-black" : "border-gray-200"
       }`}
     >
       {/* Icon and Badge */}
@@ -30,17 +30,15 @@ const TechnologyCard = ({
         </span>
       </div>
 
-      {/* Technology Name */}
       <h2 className="mt-7 text-xl font-semibold text-gray-900">
         {technology.name}
       </h2>
 
-      {/* Description */}
       <p className="mt-3 min-h-[66px] text-sm leading-6 text-gray-500">
         {technology.description}
       </p>
 
-      {/* Technology Information */}
+      {/* Technology Info */}
       <div className="mt-4 flex items-center justify-between border-t border-gray-100 pt-3 text-sm">
         <span className="rounded-md bg-gray-50 px-3 py-2 text-gray-600">
           {technology.category}
@@ -59,7 +57,7 @@ const TechnologyCard = ({
         disabled={isAdded}
         className={`mt-5 w-full rounded-xl py-3 text-sm font-medium text-white transition ${
           isAdded
-            ? "cursor-default bg-green-500"
+            ? "cursor-default bg-pink-400"
             : "bg-gray-950 hover:bg-gray-800"
         }`}
       >

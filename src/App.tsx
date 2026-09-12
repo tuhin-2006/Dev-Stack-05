@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-import { ToastBox, toast } from "react-toastify";
+import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Banner from "./Components/Banner";
 import ExploreBar from "./Components/ExploreBar";
@@ -61,11 +61,10 @@ function App() {
       <Nav />
       <Banner />
       <ExploreBar />
-      <ToastBox position="top-right" autoClose={2000} />
+      <ToastContainer position="top-right" autoClose={2000} />
       <main className="min-h-screen bg-gray-50 p-4 md:p-8">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-[minmax(0,1fr)_320px]">
-            {/* Technology Cards */}
             {loading ? (
               <div>
                 <p>Loading...</p>
@@ -78,7 +77,7 @@ function App() {
               />
             )}
 
-            {/* Your Stack */}
+            {/* Your Stack Section */}
             <YourStack
               stack={stack}
               onRemove={handleRemove}
