@@ -9,8 +9,8 @@ import Nav from "./Components/Nav";
 import TechnologyList from "./Components/TechnologyList";
 import YourStack from "./Components/YourStack";
 
-import type { CardInfo } from "./Types/CardInfoType";
 import DevStackFooter from "./Components/DevStackFooter";
+import type { CardInfo } from "./Types/CardInfoType";
 
 function App() {
   const [technologies, setTechnologies] = useState<CardInfo[]>([]);
@@ -38,23 +38,32 @@ function App() {
     const alreadyAdded = stack.some((item) => item.id === technology.id);
 
     if (alreadyAdded) {
+      toast.warning(`${technology.name} already in your stack!`);
       return;
     }
 
     setStack([...stack, technology]);
-    toast.success(`${technology.name} successfully added in stack!`);
+
+    toast.success(`${technology.name} added in stack!`);
   };
 
   // Remove one technology
-  const handleRemove = (id: number): void => {
-    const remainingItems = stack.filter((technology) => technology.id !== id);
+  const handleRemove = (id: CardInfo["id"]): void => {
+    const technology = stack.find((item) => item.id === id);
+
+    const remainingItems = stack.filter((item) => item.id !== id);
 
     setStack(remainingItems);
+
+    if (technology) {
+      toast.info(`${technology.name} removed from your stack!`);
+    }
   };
 
   // Remove all technologies
-  const handleRemoveAll = (): void => {
+  const handleRemoveAll = () => {
     setStack([]);
+    toast.error("All technologies removed from your stack!");
   };
 
   return (

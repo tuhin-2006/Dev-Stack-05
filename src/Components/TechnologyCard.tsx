@@ -54,7 +54,7 @@ const TechnologyCard = ({
       {/* Add Button */}
       <button
         onClick={() => addOn(technology)}
-        disabled={isAdded}
+        // disabled={isAdded}
         className={`mt-5 w-full rounded-xl py-3 text-sm font-medium text-white transition ${
           isAdded
             ? "cursor-default bg-pink-400"

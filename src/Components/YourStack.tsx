@@ -1,12 +1,12 @@
 import type { CardInfo } from "../Types/CardInfoType";
 
-interface YourStackProps {
+interface StackProps {
   stack: CardInfo[];
   onRemove: (id: number) => void;
   onRemoveAll: () => void;
 }
 
-const YourStack = ({ stack, onRemove, onRemoveAll }: YourStackProps) => {
+const YourStack = ({ stack, onRemove, onRemoveAll }: StackProps) => {
   return (
     <div className="rounded-2xl bg-white p-5 shadow-sm">
       {/* My-Stach Head */}
