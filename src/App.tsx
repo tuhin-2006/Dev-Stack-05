@@ -10,6 +10,7 @@ import TechnologyList from "./Components/TechnologyList";
 import YourStack from "./Components/YourStack";
 
 import type { CardInfo } from "./Types/CardInfoType";
+import DevStackFooter from "./Components/DevStackFooter";
 
 function App() {
   const [technologies, setTechnologies] = useState<CardInfo[]>([]);
@@ -86,6 +87,7 @@ function App() {
           </div>
         </div>
       </main>
+      <DevStackFooter></DevStackFooter>
     </>
   );
 }
