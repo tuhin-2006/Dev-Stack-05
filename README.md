@@ -134,3 +134,9 @@ So:
 **Parent → Child:** Props
 
 **Child → Parent:** Callback function through props
+
+👨‍💻 Project
+
+DevStack — Technology Stack Management Website
+
+Built with ❤️ using React, TypeScript and Tailwind CSS.
