@@ -1,10 +1,8 @@
-
 # DevStack
 
 A Simple Technology Stack Management Website
 
 DevStack is a simple and responsive web application where users can explore different technologies and build their own technology stack. Users can add their favorite technologies to their stack and manage them easily.
-
 
 ## 🌟Features
 
@@ -47,21 +45,22 @@ useEffect is used to run side effects in a React component. I used it to fetch t
 A unique key helps React identify each item in a list. It allows React to efficiently update the correct item when the list changes.
 
 #### 6. What is conditional rendering? Show one place you used it.
+
 Conditional rendering means showing different UI based on a condition.
 
 In this project, I used it to show an empty stack message when there are no technologies in the user's stack.
+
 ```
 {stack.length === 0 && (
   <p>Your stack is empty</p>
 )}
 ```
+
 #### 7. How do you pass data from a parent component to a child component, and how does a child send something back to the parent?
 
 A parent component passes data to a child component using props.
 
 To send something back, the parent can pass a function as a prop, and the child can call that function.
-
-
 
 👨‍💻 Project
 
